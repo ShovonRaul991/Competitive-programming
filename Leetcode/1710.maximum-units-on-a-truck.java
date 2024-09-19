@@ -1,0 +1,23 @@
+/*
+ * @lc app=leetcode id=1710 lang=java
+ *
+ * [1710] Maximum Units on a Truck
+ */
+
+// @lc code=start
+class Solution {
+    public int maximumUnits(int[][] boxTypes, int truckSize) {
+        Arrays.sort(boxTypes, (a,b) -> -Integer.compare(a[1], b[1]));
+        int maxUnits = 0;
+        for(int[] box : boxTypes) {
+            if(truckSize < box[0]) {
+                return maxUnits + truckSize*box[1];
+            }
+            maxUnits += box[0] * box[1];
+            truckSize -=box[0];
+        }
+        return maxUnits;
+    }
+}
+// @lc code=end
+
