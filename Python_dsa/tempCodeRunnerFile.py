@@ -1,5 +1,0 @@
-print(setTheBit(a, 1))
-    # print(unsetTheBit(b, 1))
-    # print(toggleBit(a, 2))
-    # print(DecimalToBinary(13))
-    # print(CheckIfPowerofTwo(155))
